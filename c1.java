@@ -1,13 +1,18 @@
-import java.lang.NullPointerException;
+//import java.lang.NullPointerException;
 
-void main(String[] args) {
-    if (args == null)
-        throw new NullPointerException("args is null!");
-    
-    for (int i_init = 1; i_init < args.length; i_init++) {
-        //System.out.println(args[i_init]);
+void main() {
+    String[] strings = new String[] {"flower", "flow", "flight"};
+    System.out.println(findPrefix(strings));
+}
+
+String findPrefix(String[] strings) {
+    String prefix = "";
+    int startnum = 0;
+    char[] index = strings[startnum].toCharArray();
+    for (int i_init = startnum+1; i_init < strings.length; i_init++) {
+        //System.out.println(strings[i_init]);
         // For each character in string
-        char[] index = args[i_init].toCharArray();
+        char[] nextIndex = strings[i_init].toCharArray();
         for (int i_secondary = 0; i_secondary < index.length; i_secondary++) {
             
         }
